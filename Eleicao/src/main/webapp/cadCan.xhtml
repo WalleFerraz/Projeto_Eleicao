@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">  
+    <h:head>
+        <title>Trabalho Final</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:fieldset>
+                <h:panelGrid style="margin: 0 auto; text-align: center">
+                    <p:outputLabel value="VOTAÇÃO"/>
+                </h:panelGrid>
+
+
+                <h:panelGrid columns="2" style="margin: 0 auto; margin-top: 40px ">
+                    <p:outputLabel value="Candidato:"/>
+                    <p:inputText style="width: 220px" value="#{ct.cpCandidato}"/>
+                    <p:outputLabel value="Chapa:" />
+                    <p:inputText style="width: 220px" value="#{ct.cpChapa}"/>
+                </h:panelGrid>
+
+
+                <h:panelGrid style="margin: 0 auto; margin-top: 20px">
+                    <p:commandButton value="Cadastrar" update="@form" style="width: 160px" action="#{ct.btCadastrar()}"/>
+                </h:panelGrid>
+
+                <h:panelGrid style="margin-top: 30px">
+                    <p:outputLabel value="Usuário: #{ct.cpNome}"/>
+                </h:panelGrid>
+            </p:fieldset>
+
+
+            <h:panelGrid columns="3" style="margin: 0 auto; margin-top: 20px">
+                <p:commandButton value="Voltar" update="@form" action="#{ct.btVoltar()}"/>
+                <p:commandButton value="Sair" update="@form" action="#{ct.btSair()}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
